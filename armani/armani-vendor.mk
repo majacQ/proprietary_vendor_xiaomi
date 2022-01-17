@@ -134,14 +134,19 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/armani/proprietary/vendor/lib/libchromatix_s5k3h2yx_owt8a01a_video_hd.so:system/vendor/lib/libchromatix_s5k3h2yx_owt8a01a_video_hd.so \
     vendor/xiaomi/armani/proprietary/vendor/lib/libchromatix_s5k3h2yx_owt8a01a_zsl.so:system/vendor/lib/libchromatix_s5k3h2yx_owt8a01a_zsl.so
 
-# DRM (seed)
+# DRM (TheMuppets Motorola msm8226-common)
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/armani/proprietary/bin/qseecomd:system/bin/qseecomd \
+    vendor/xiaomi/armani/proprietary/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
+    vendor/xiaomi/armani/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
     vendor/xiaomi/armani/proprietary/vendor/lib/libdrmfs.so:system/vendor/lib/libdrmfs.so \
     vendor/xiaomi/armani/proprietary/vendor/lib/libdrmtime.so:system/vendor/lib/libdrmtime.so \
     vendor/xiaomi/armani/proprietary/vendor/lib/libQSEEComAPI.so:system/vendor/lib/libQSEEComAPI.so \
     vendor/xiaomi/armani/proprietary/vendor/lib/librpmb.so:system/vendor/lib/librpmb.so \
-    vendor/xiaomi/armani/proprietary/vendor/lib/libssd.so:system/vendor/lib/libssd.so
+    vendor/xiaomi/armani/proprietary/vendor/lib/libssd.so:system/vendor/lib/libssd.so \
+    vendor/xiaomi/armani/proprietary/vendor/lib/libwvdrm_L3.so:system/vendor/lib/libwvdrm_L3.so \
+    vendor/xiaomi/armani/proprietary/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
+    vendor/xiaomi/armani/proprietary/vendor/lib/libWVStreamControlAPI_L3.so:system/vendor/lib/libWVStreamControlAPI_L3.so
 
 # GPS (TheMuppets Motorola msm8226-common)
 PRODUCT_COPY_FILES += \
@@ -268,14 +273,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/armani/proprietary/etc/firmware/venus.mbn:system/etc/firmware/venus.mbn \
     vendor/xiaomi/armani/proprietary/etc/firmware/venus.mdt:system/etc/firmware/venus.mdt
 
-# WideVine (bullhead)
-PRODUCT_COPY_FILES += \
-    vendor/xiaomi/armani/proprietary/vendor/lib/drm/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
-    vendor/xiaomi/armani/proprietary/vendor/lib/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so \
-    vendor/xiaomi/armani/proprietary/vendor/lib/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
-    vendor/xiaomi/armani/proprietary/vendor/lib/libwvm.so:system/vendor/lib/libwvm.so \
-    vendor/xiaomi/armani/proprietary/vendor/lib/libWVStreamControlAPI_L1.so:system/vendor/lib/libWVStreamControlAPI_L1.so
-
 # Wifi (V8.0.1.0)
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/armani/proprietary/etc/firmware/wcnss.b00:system/etc/firmware/wcnss.b00 \
@@ -288,5 +285,3 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/armani/proprietary/etc/firmware/wcnss.b09:system/etc/firmware/wcnss.b09 \
     vendor/xiaomi/armani/proprietary/etc/firmware/wcnss.mdt:system/etc/firmware/wcnss.mdt \
     vendor/xiaomi/armani/proprietary/lib/libqminvapi.so:system/lib/libqminvapi.so
-
-$(call inherit-product, vendor/qcom/binaries/msm8974/graphics/graphics-vendor.mk)
